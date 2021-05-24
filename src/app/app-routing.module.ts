@@ -15,6 +15,9 @@ const routes: Routes = [
   { path: 'user', loadChildren: './user/user.module#UserPageModule' },
   { path: 'tablinks', loadChildren: './tablinks/tablinks.module#TablinksPageModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
+  { path: 'doh-modal', loadChildren: './doh-modal/doh-modal.module#DOHModalPageModule' },
    
 ];
 

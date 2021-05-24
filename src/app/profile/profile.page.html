@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" icon="" color="tertiary" fill="outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div class="img-container">
+        <ion-img [src]="img$"></ion-img>
+        <small>[Tap the image to change profile picture]</small>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+
+  <div class="container">
+    <ion-item class="txt-input">
+      <ion-label>
+        <span class="item-label">Full Name</span><br>
+        <span class="item-content"><strong>{{ fname +' '+ mname +' '+lname }}</strong></span>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="txt-input">
+      <ion-label>
+        <span class="item-label">Tag ID</span><br>
+        <span class="item-content"><strong>{{ tag }}</strong></span></ion-label>
+    </ion-item>
+    <ion-item class="txt-input">
+      <ion-label><span class="item-label">Age</span><br>
+        <span class="item-content"><strong>{{ age }}</strong></span>
+      </ion-label>
+    </ion-item>
+    <ion-item class="txt-input">
+      <ion-label>
+        <span class="item-label">Email:</span><br>
+        <span class="item-content"><strong>{{ email }}</strong></span></ion-label>
+    </ion-item>
+    <ion-item class="txt-input">
+      <ion-label><span class="item-label">Address</span><br>
+        <span class="item-content"><strong>{{ address }}</strong></span>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="txt-input">
+      <ion-label><span class="item-label">Contact No:</span><br>
+        <span class="item-content"><strong>{{ contact }}</strong></span>
+      </ion-label>
+    </ion-item>
+  </div>
+</ion-content>
