@@ -1,0 +1,67 @@
+<ion-header style="height: 30px;">
+  <ion-toolbar>
+    <ion-item lines = "none">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+       <ion-label style="font-weight: 500; font-size: 1em;">Findtrack</ion-label>
+    </ion-item>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    Welcome {{fname}}!
+    <br>
+
+   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+   <ion-card *ngFor="let user of users">
+        <ion-card-header>
+          <ion-card-subtitle>
+           Data
+          </ion-card-subtitle>
+          <ion-item>
+            <ion-icon name="thermometer"></ion-icon>
+            <ion-label>{{user.temp}}</ion-label>
+          </ion-item>
+        </ion-card-header>
+
+        <ion-card-content>
+           <ion-label>Date: {{user.cdate}}</ion-label>
+        </ion-card-content>
+
+        <ion-row>
+          <ion-item lines = "none"> 
+
+          
+            <ion-button size ="medium"color="success" (click)="showCustomer(user.id,user.tag,user.temp,user.cdate,user.ctime)">
+              <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+                 Show
+            </ion-button>
+          </ion-item>
+          <ion-item lines = "none">
+
+            <ion-button size ="medium"color="danger"(click)="delCustomer(user.id)" >
+              <ion-icon name="trash"></ion-icon>
+                Delete
+            </ion-button>
+          </ion-item>
+        </ion-row>
+   </ion-card>
+
+  <ion-infinite-scroll  (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

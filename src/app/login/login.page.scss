@@ -1,0 +1,37 @@
+.card-position {
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  vertical-align: middle;
+  padding-top:5%;
+}
+
+.img-set {
+  width: 100%;
+}
+
+.img-container {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+ion-card {
+  box-shadow: none !important;
+}
+
+ion-card-title, ion-card-title.ion-inherit-color {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.app-name {
+  color: green;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
