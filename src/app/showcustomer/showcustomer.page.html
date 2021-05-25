@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <ion-header>
     <ion-toolbar>
       <ion-title>Show Customer</ion-title>
@@ -22,3 +23,51 @@
   </ion-card>
   </ion-content>
   
+=======
+<ion-header class="ion-no-border" no-border>
+  <ion-toolbar>
+    <ion-title class="ion-text-center custom-font">Show</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button >
+      </ion-back-button>
+    </ion-buttons>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+  <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#1FC1D5"
+      d="M68.6,-33.5C81.6,-17.2,79.6,13.8,65.7,37.6C51.8,61.3,25.9,77.8,2.1,76.6C-21.7,75.4,-43.5,56.5,-54.2,34.6C-65,12.7,-64.8,-12.3,-53.9,-27.4C-43,-42.4,-21.5,-47.6,3.2,-49.4C27.9,-51.2,55.7,-49.7,68.6,-33.5Z"
+      transform="translate(100 100)" />
+  </svg>
+
+  <div class="ion-padding">
+
+
+    <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">Tag ID</span></div>
+    <div class="wrap-input">
+      
+      <input class="input" type="text" value="{{tag}}" disabled>
+    </div>
+    <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">ID No</span></div>
+    <div class="wrap-input">
+      
+      <input class="input" type="text" value="{{id}}" disabled>
+    </div>
+    <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">Temperature</span></div>
+ 
+    <div class="wrap-input">
+      <input class="input" type="text" value="{{temp}}" disabled>
+    </div>
+    <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">Date</span></div>
+    <div class="wrap-input">
+      <input class="input" type="text" value="{{cdate}}" disabled>
+    </div>
+
+
+  </div>
+
+</ion-content>
+>>>>>>> Stashed changes

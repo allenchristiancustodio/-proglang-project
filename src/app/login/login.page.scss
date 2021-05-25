@@ -1,3 +1,11 @@
+.custom-font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+ ion-content {
+    --overflow: hidden;
+    --background: rgba(237, 242, 245, .8);
+   
+}
 .card-position {
   align-items: center;
   text-align: center;
@@ -35,3 +43,71 @@ ion-card-title, ion-card-title.ion-inherit-color {
   text-transform: uppercase;
   font-size: 1.2rem;
 }
+.wrap-input {
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  margin-bottom: 26px;
+  box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  line-height: 1.2;
+  border: none;
+  outline: none;
+  height: 46px;
+  padding: 0 20px 0 23px; 
+}
+.form-btn {
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 300px;
+  height: 42px;
+  background-color: #00929E;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding-top: 5px;
+  transition: all 0.4s;
+ 
+}
+
+.form-btn:hover {
+  background-color: #007C8E;
+}
+.form-btn2 {
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 300px;
+  height: 42px;
+  background-color: #FCAF17;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding-top: 5px;
+  transition: all 0.4s;
+ 
+}
+.form-btn2:hover {
+  background-color: #F58220;
+}
+
+span{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+  font-weight: 400px;
+}
+

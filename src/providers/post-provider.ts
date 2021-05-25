@@ -5,7 +5,12 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PostProvider {
     server: string = 'http://localhost/server_api/';
+<<<<<<< Updated upstream
 
+=======
+    public version: string = 'v1.02.01';
+    public fullname: string = '';
+>>>>>>> Stashed changes
     constructor(public http: Http) {
 
     }

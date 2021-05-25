@@ -1,10 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild , OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Router } from '@angular/router';
+import { Router ,ActivatedRoute} from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { PostProvider } from '../providers/post-provider';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -13,22 +14,36 @@ export class AppComponent {
 
   @ViewChild('content') nav: NavController;
   rootPage: any;
-
+  ctime: any;
+  cdate: any;
+  temp: any;
+  id: any;
+  tag: any;
+  fname: any;
+  mname: any;
+  lname: any;
+  fullname: any;
+  anggota: any;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private storage: Storage,
     private router: Router,
     private statusBar: StatusBar,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private postPvdr: PostProvider,
+    private actRoute: ActivatedRoute
   ) {
     this.initializeApp();
   }
+  
 
   initializeApp() {
+    
       this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
     });
 
       this.storage.get('session_storage').then((res) => {
@@ -50,4 +65,8 @@ export class AppComponent {
     toast.present();
 
   }
+
+  refresh(): void {
+    window.location.reload();
+}
 }

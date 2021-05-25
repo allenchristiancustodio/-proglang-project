@@ -13,20 +13,21 @@ export class LoginPage implements OnInit {
   img$= 'assets/img/logo.png';
  email: string = '';
  password: string = '';
-
+  sversion: string = '';
   constructor(
     private router: Router,
     public toastController: ToastController,
-    private postPvdr: PostProvider,
+   public postPvdr: PostProvider,
     private storage: Storage,
     ) { }
 
   ngOnInit() {
-
+     
   }
-
+ 
   formRegister() {
     this.router.navigate(['/register']);
+    
   }
 
   async proseslogin() {
@@ -42,7 +43,7 @@ export class LoginPage implements OnInit {
          this.storage.set('session_storage', data.result);
          this.router.navigate(['/customer']);
          const toast = await this.toastController.create({
-          message: 'Welcome!',
+          message: 'Log in successfuly! Welcome!',
           duration: 2000
          });
          toast.present();

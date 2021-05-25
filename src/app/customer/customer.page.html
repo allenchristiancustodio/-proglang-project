@@ -1,18 +1,23 @@
 <ion-header style="height: 30px;">
-  <ion-toolbar>
-    <ion-item lines = "none">
+  <ion-toolbar class="ionn-header" >
+    <ion-item lines = "none">  
       <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
+        <p class="headlabel1">Find</p><p class="headlabel2">track</p>
+        
       </ion-buttons>
-       <ion-label style="font-weight: 500; font-size: 1em;">Findtrack</ion-label>
+      <ion-buttons [routerLink]="['/profile']" slot="end">
+        <ion-label><small>{{fname}}</small></ion-label>
+        <ion-icon  class="icon" name="person" slot ="end"></ion-icon>
+ 
+    </ion-buttons>
     </ion-item>
    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    Welcome {{fname}}!
-    <br>
+   
 
    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
@@ -23,39 +28,52 @@
     </ion-refresher-content>
   </ion-refresher>
 
-   <ion-card *ngFor="let user of users">
-        <ion-card-header>
-          <ion-card-subtitle>
-           Data
-          </ion-card-subtitle>
-          <ion-item>
-            <ion-icon name="thermometer"></ion-icon>
-            <ion-label>{{user.temp}}</ion-label>
-          </ion-item>
-        </ion-card-header>
 
-        <ion-card-content>
-           <ion-label>Date: {{user.cdate}}</ion-label>
-        </ion-card-content>
+  <div class="ion-padding">
+ 
+    <ion-row class="first_row" class="ion-align-items-center ion-padding-horizontal">
+      <ion-col size="6">
+        <h5 class="data"></h5>
+      </ion-col>
+      <ion-col size="6" class="ion-text-right">
+        <ion-button fill="clear" color="dark">
+          <ion-icon slot="icon-only" name=""></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-card *ngFor="let user of users">
+      <ion-card-header style="height: 0px;">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="6">
+            <ion-card-subtitle>Data</ion-card-subtitle>
+          </ion-col>
+          <ion-col size="6" class="ion-text-right">
+           
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
 
         <ion-row>
-          <ion-item lines = "none"> 
-
-          
-            <ion-button size ="medium"color="success" (click)="showCustomer(user.id,user.tag,user.temp,user.cdate,user.ctime)">
-              <ion-icon slot="start" name="information-circle-outline"></ion-icon>
-                 Show
+          <ion-col size="8">
+            <ion-card-title>
+              <ion-icon name="thermometer"></ion-icon>
+              <ion-label  style="padding-bottom: 50px; color: #FFff;  ">{{user.temp}}</ion-label>
+            </ion-card-title>
+            <ion-card-subtitle>Date: {{user.cdate}}</ion-card-subtitle>
+          </ion-col>
+          <ion-col size="4" class="ion-text-right">
+            <ion-button (click)="showCustomer(user.id,user.tag,user.temp,user.cdate,user.ctime)" fill="clear" color="dark" size="large" >
+              <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
             </ion-button>
-          </ion-item>
-          <ion-item lines = "none">
-
-            <ion-button size ="medium"color="danger"(click)="delCustomer(user.id)" >
-              <ion-icon name="trash"></ion-icon>
-                Delete
-            </ion-button>
-          </ion-item>
+          </ion-col>
         </ion-row>
-   </ion-card>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
 
   <ion-infinite-scroll  (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content

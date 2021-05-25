@@ -1,64 +1,74 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>Register</ion-title>
-        <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
-      </ion-toolbar>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<ion-header class="ion-no-border" no-border [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center custom-font">Sign Up</ion-title>
+    <ion-back-button fill="clear" color="dark" size="large" >
+    </ion-back-button>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list>
+<ion-content fullscreen="true">
 
-      <ion-item>
-        <ion-label position="floating"> First Name </ion-label>
-        <ion-input type="text" [(ngModel)]="fname"></ion-input>
-      </ion-item>
+  <svg class="back-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#8295A3"
+      d="M68.6,-33.5C81.6,-17.2,79.6,13.8,65.7,37.6C51.8,61.3,25.9,77.8,2.1,76.6C-21.7,75.4,-43.5,56.5,-54.2,34.6C-65,12.7,-64.8,-12.3,-53.9,-27.4C-43,-42.4,-21.5,-47.6,3.2,-49.4C27.9,-51.2,55.7,-49.7,68.6,-33.5Z"
+      transform="translate(100 100)" />
+  </svg>
 
-      <ion-item>
-        <ion-label position="floating"> Middle name </ion-label>
-        <ion-input type="text" [(ngModel)]="mname"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating"> Last name </ion-label>
-        <ion-input type="text" [(ngModel)]="lname"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating"> Address </ion-label>
-        <ion-input type="text" [(ngModel)]="address"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Contact </ion-label>
-        <ion-input type="text" [(ngModel)]="contact"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Age </ion-label>
-        <ion-input type="text" [(ngModel)]="age"></ion-input>
-      </ion-item>
+  <div class="ion-padding">
 
-      <ion-item>
-        <ion-label position="floating"> Email </ion-label>
-        <ion-input type="text" [(ngModel)]="email"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label position="floating"> Password </ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
 
-      <ion-item>
-        <ion-label position="floating"> Confirm Password </ion-label>
-        <ion-input type="password" [(ngModel)]="confirm_password"></ion-input>
-      </ion-item>
-    
-    </ion-list>
-  
-    <div padding>
-      <ion-button expand="block" shape="round" (click)="addRegister()">Submit</ion-button>
-      <ion-button expand="block" shape="round" (click)="formLogin()">Sign In</ion-button>
+
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="fname" name="user-name" placeholder="First Name">
     </div>
-  
-  </ion-content>
+
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="mname" name="user-name" placeholder="Middle Name">
+    </div>
+
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="lname" name="user-name" placeholder="Last Name">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="address" name="user-name" placeholder="Address">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="contact" name="user-name" placeholder="Contact">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="age" name="user-name" placeholder="Age">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="text" [(ngModel)]="email" name="user-name" placeholder="Email">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="password" [(ngModel)]="password" name="user-name" placeholder="Password">
+    </div>
+    <div class="wrap-input">
+      <input class="input" type="password" [(ngModel)]="confirm_password" name="user-name" placeholder="Confirm Password">
+    </div>
+
+    <div class="container-form-btn">
+
+      
+      <button class="form-btn custom-font" (click)="addRegister()">
+      Submit
+      </button>
+      <br>
+      
+    </div>
+
+    <p style="padding-top: 20px;" class="ion-text-center no-border custom-font">Already have an account? <a (click)="formLogin()">Sign In</a></p>
 
 
+  </div>
 
+</ion-content>
+
+<ion-footer class="ion-no-border" no-border>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-footer>

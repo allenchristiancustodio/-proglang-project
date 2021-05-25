@@ -1,6 +1,10 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 <div class="card-position"> 
 
 <ion-content [fullscreen]="true" class="card-position">
+
+
   <ion-card>
     <ion-card-header class="text-center">
       <div class="img-container">
@@ -9,20 +13,24 @@
     </ion-card-header>
 
     <ion-card-content>
-      
-        <div style="text-align: left !important; padding-left: 10px;"><span style="color: black;"><strong>Email</strong></span></div>
-        <ion-item>
-          <ion-input type="text" [value]="" [(ngModel)]="email" required placeholder="example@domain.com"></ion-input>
-        </ion-item><br>
-        <div style="text-align: left !important; padding-left: 10px;"><span style="color: black;"><strong>Password</strong></span></div>
-        <ion-item>
-          <ion-input type="password" [value]="" [(ngModel)]="password" required placeholder="Your password here" clearOnEdit="false"></ion-input>
-        </ion-item><br>
-            <ion-button expand="block" shape="round" (click)="proseslogin()" >Sign In</ion-button>
-            <ion-button  color="warning" expand="block" shape="round" (click)="formRegister()">Register</ion-button>
+      <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">Email</span></div>
+      <div class="wrap-input">
+        <input class="input" type="text" [(ngModel)]="email" name="user-name" placeholder="example@domain.com" required>
+      </div>
+       
+        <div style="text-align: left !important; padding-left: 10px;"><span class="elabel">Password</span></div>
+      <div class="wrap-input">
+        <input class="input" type="password" [(ngModel)]="password" name="user-name" placeholder="Your password here" required>
+      </div>
+            <button class="form-btn custom-font" (click)="proseslogin()">Login</button><br>
+            <button class="form-btn2 custom-font" (click)="formRegister()">Register</button>
+
     </ion-card-content>
   </ion-card>
 
 </ion-content>
 
 </div>
+<ion-footer class="ion-no-border" no-border>
+  <span>{{postPvdr.version}}</span>
+ </ion-footer>

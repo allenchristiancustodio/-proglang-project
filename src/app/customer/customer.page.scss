@@ -1,15 +1,58 @@
-ion-content{
-  --background: #f0f4fd;
-}
-
-p{
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  margin: 0;
-}
 
 ion-button{
   padding-bottom: 10px;
   padding-left: 20px;
+}
+
+ .headlabel1{
+  font-weight: 520;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  color: #1FC1D5;
+}
+ .headlabel2{
+  font-weight: 520;
+  font-size: 1.1em; 
+  font-family: sans-serif;
+  color: orange;
+}
+
+
+.icon{
+  color: #1FC1D5;
+}
+
+
+  
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+
+
+
+ion-col {
+  padding: 0;
+}
+
+// ::ng-deep .searchbar-search-icon {
+//   color: #316dd0 !important;
+// }
+ 
+ion-content {
+  --background: rgb(255, 255, 255);
+}
+
+ion-card {
+  padding: 6px;
+  box-shadow: none;
+  box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.151);
+  border-radius: 30px;
+  --background:#3ECCDF;
+}
+.first_row{
+  padding-top: 20px;
+  margin-top:20px ;
 }

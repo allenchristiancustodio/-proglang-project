@@ -19,6 +19,9 @@ export class CustomerPage implements OnInit {
   fname: string;
   anggota: any;
   tag: string;
+  time: any;
+ public fullname$: any;
+
 
   constructor(
     private router: Router,
@@ -28,6 +31,7 @@ export class CustomerPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    
   }
 
   ionViewWillEnter() {
@@ -38,6 +42,10 @@ export class CustomerPage implements OnInit {
       this.anggota = res;
       this.fname = this.anggota.fname;
       this.tag = this.anggota.tag;
+      this.time=
+      this.fullname$ = this.anggota.fname + ' ' + this.anggota.mname + ' ' + this.anggota.lname;
+console.log(this.fullname$);
+     
     });
   }
 
